@@ -1,0 +1,190 @@
+extends layouts/default.pug
+include mixins/section-3.pug
+include mixins/product-item.pug
+block title
+    title Trang Danh sách Sản Phẩm
+
+block main
+    .breadcurmb
+        .container 
+            .breadcurmb__wrap
+                a(class="breadcurmb__link" href="#") Trang Chủ
+                a(class="breadcurmb__link" href="#") Chó 
+                a(class="breadcurmb__link" href="http://127.0.0.1:5500/CODE%20FRONT%20-%20END/ProjectVN/Project-2/product-detail.html" target="_blank") Chó Nhỏ 
+    +section-3()
+    .layout-product
+        .container
+            .layout-product__wrap
+                .layout-product__left
+                    .filters
+                        .filters__title 
+                            img(src="assets/images/DSSP-boloc.svg")
+                            span Bộ Lọc
+                        .filters__list
+                            .filters__item
+                                .filters__item-title Giống
+                                .filters__item-box
+                                    .filters__item-choose
+                                        input(type="checkbox" name="gioiTinh" id="duc" )
+                                        label(for="duc") Đực
+                                    .filters__item-choose
+                                        input(type="checkbox" name="gioiTinh" id="cai" )
+                                        label(for="cai") Cái
+                            .filters__item
+                                .filters__item-title Màu Sắc
+                                .filters__item-box
+                                    .filters__item-choose
+                                        input(type="checkbox" name="gioiTinh" id="duc" )
+                                        label(for="duc") Xám
+                                    .filters__item-choose
+                                        input(type="checkbox" name="gioiTinh" id="cai" )
+                                        label(for="cai") Đen
+                                    .filters__item-choose
+                                        input(type="checkbox" name="gioiTinh" id="cai" )
+                                        label(for="cai") Trắng
+                            .filters__item
+                                .filters__item-title Kích Thước
+                                .filters__item-box
+                                    .filters__item-choose
+                                        input(type="checkbox" name="gioiTinh" id="duc" )
+                                        label(for="duc") Nhỏ
+                                    .filters__item-choose
+                                        input(type="checkbox" name="gioiTinh" id="cai" )
+                                        label(for="cai") Vừa
+                                    .filters__item-choose
+                                        input(type="checkbox" name="gioiTinh" id="cai" )
+                                        label(for="cai") Lớn
+                .layout-product__right
+                    // Section-5
+                    .section-5
+                        .section-5__head
+                            .section-5__title Chó Nhỏ
+                            button.section-5__button-filter 
+                                img(src="assets/images/DSSP-boloc.svg")
+                                span Bộ Lọc
+                        .section-5__wrap
+                            -
+                                var pets = [
+                                    {
+                                    image: 'assets/images/product-1.jpg',
+                                    title: 'MO231 - Pomeranian Trắng',
+                                    gender: 'Đực',
+                                    age: '02 tháng',
+                                    price: '6.900.000 VND'
+                                    },
+                                    {
+                                    image: 'assets/images/product-2.jpg',
+                                    title: 'MO502 - Poodle Tiny Vàng',
+                                    gender: 'Cái',
+                                    age: '02 tháng',
+                                    price: '3.900.000 VND'
+                                    },
+                                    {
+                                    image: 'assets/images/product-3.jpg',
+                                    title: 'MO102 - Poodle Tiny Sepia',
+                                    gender: 'Đực',
+                                    age: '02 tháng',
+                                    price: '4.000.000 VND'
+                                    },
+                                    {
+                                    image: 'assets/images/product-4.jpg',
+                                    title: 'MO512 - Alaskan Malamute',
+                                    gender: 'Đực',
+                                    age: '03 tháng',
+                                    price: '8.900.000 VND'
+                                    },
+                                    {
+                                    image: 'assets/images/product-5.jpg',
+                                    title: 'MO231 - Pembroke Corgi',
+                                    gender: 'Đực',
+                                    age: '02 tháng',
+                                    price: '7.900.000 VND'
+                                    },
+                                    {
+                                    image: 'assets/images/product-6.jpg',
+                                    title: 'MO502 - Pembroke Corgi',
+                                    gender: 'Cái',
+                                    age: '02 tháng',
+                                    price: '9.000.000 VND'
+                                    },
+                                    {
+                                    image: 'assets/images/product-7.jpg',
+                                    title: 'MO231 - Pomeranian Trắng',
+                                    gender: 'Cái',
+                                    age: '02 tháng',
+                                    price: '6.500.000 VND'
+                                    },
+                                    {
+                                    image: 'assets/images/product-8.jpg',
+                                    title: 'MO512 - Poodle Tiny',
+                                    gender: 'Đực',
+                                    age: '02 tháng',
+                                    price: '5.000.000 VND'
+                                    },
+                                    {
+                                    image: 'assets/images/product-1.jpg',
+                                    title: 'MO231 - Pomeranian Trắng',
+                                    gender: 'Đực',
+                                    age: '02 tháng',
+                                    price: '6.900.000 VND'
+                                    },
+                                    {
+                                    image: 'assets/images/product-2.jpg',
+                                    title: 'MO502 - Poodle Tiny Vàng',
+                                    gender: 'Cái',
+                                    age: '02 tháng',
+                                    price: '3.900.000 VND'
+                                    },
+                                    {
+                                    image: 'assets/images/product-3.jpg',
+                                    title: 'MO102 - Poodle Tiny Sepia',
+                                    gender: 'Đực',
+                                    age: '02 tháng',
+                                    price: '4.000.000 VND'
+                                    },
+                                    {
+                                    image: 'assets/images/product-4.jpg',
+                                    title: 'MO512 - Alaskan Malamute',
+                                    gender: 'Đực',
+                                    age: '03 tháng',
+                                    price: '8.900.000 VND'
+                                    }
+                                ];
+
+                            each pet in pets
+                                +product-item (
+                                    pet.image, 
+                                    pet.title, 
+                                    pet.gender, 
+                                    pet.age, 
+                                    pet.price,
+                                    "product-item--three"
+                                )
+                    // End section-5
+                    .pagination 
+                        ul.pagination__list
+                            li.pagination__item
+                                a(href="#" class="pagination__link")
+                                    i(class="fa-solid fa-arrow-left")
+                            li.pagination__item
+                                a(href="#" class="pagination__link pagination__link--active") 1
+                            li.pagination__item
+                                a(href="#" class="pagination__link") 2
+                            li.pagination__item
+                                a(href="#" class="pagination__link") 3
+                            li.pagination__item
+                                a(href="#" class="pagination__link") 4
+                            li.pagination__item
+                                a(href="#" class="pagination__link") ...
+                            li.pagination__item
+                                a(href="#" class="pagination__link") 28
+                            li.pagination__item
+                                a(href="#" class="pagination__link")
+                                    i(class="fa-solid fa-arrow-right")
+
+                        
+                            
+
+
+
+
