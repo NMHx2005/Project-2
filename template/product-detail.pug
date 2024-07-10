@@ -10,13 +10,36 @@ block main
             .product-info__wrap
                 .product-info__left
                     .product-info__images-main
-                        img(src="assets/images/product-detail-1.jpg")
+                        div(class="swiper mySwiper2" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" id="viewerSliderMain")
+                            .swiper-wrapper
+                                .swiper-slide
+                                    img(src="assets/images/product-detail-1.jpg", alt="Product 1")
+                                .swiper-slide
+                                    img(src="assets/images/product-detail-2.jpg", alt="Product 2")
+                                .swiper-slide
+                                    img(src="assets/images/product-detail-3.jpg", alt="Product 3")
+                                .swiper-slide
+                                    img(src="assets/images/product-detail-4.jpg", alt="Product 4")
+                                .swiper-slide
+                                    img(src="assets/images/product-detail-5.jpg", alt="Product 5")
+                            .swiper-button-next
+                            .swiper-button-prev
+
+
                     .product-info__images-thumbs
-                        img(src="assets/images/product-detail-1.jpg")
-                        img(src="assets/images/product-detail-2.jpg")
-                        img(src="assets/images/product-detail-3.jpg")
-                        img(src="assets/images/product-detail-4.jpg")
-                        img(src="assets/images/product-detail-5.jpg")
+                        div(class="swiper mySwiper")
+                            div(class="swiper-wrapper")
+                                div(class="swiper-slide")
+                                    img(src="assets/images/product-1.jpg")
+                                div(class="swiper-slide")
+                                    img(src="assets/images/product-detail-2.jpg")
+                                div(class="swiper-slide")
+                                    img(src="assets/images/product-detail-3.jpg")
+                                div(class="swiper-slide")
+                                    img(src="assets/images/product-detail-4.jpg")
+                                div(class="swiper-slide")
+                                    img(src="assets/images/product-detail-5.jpg")
+                    
                 .product-info__right
                     .breadcurmb
                         .breadcurmb__wrap

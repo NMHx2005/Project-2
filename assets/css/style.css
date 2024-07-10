@@ -1012,7 +1012,8 @@ a {
   margin-bottom: 10px;
 }
 .product-info__images-thumbs img {
-  width: calc(20% - 9.6px);
+  width: 100%;
+  /* width: calc(20% - 9.6px); */
   margin-right: 12px;
   aspect-ratio: 1/1;
   object-fit: cover;
